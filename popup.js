@@ -2,7 +2,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, ([tab]) => {
     chrome.scripting.executeScript(
         {
             target: { tabId: tab.id },
-            func: () => window.__LS_DUMP__
+            func: () => window.LS_DUMP
         },
         (results) => {
             const output = document.getElementById("output");
